@@ -1,6 +1,6 @@
 package org.example.kafkaproducer.service;
 
-import org.example.kafkaproducer.dto.Customer;
+import org.example.dto.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
@@ -26,7 +26,7 @@ public class KafkaMessagePublisher {
     }
 
     public void sendEventsToKafkaTopic(Customer customer) {
-        CompletableFuture<SendResult<String, Object>> send = kafkaTemplate.send("java-testTopic-1", customer);
+        CompletableFuture<SendResult<String, Object>> send = kafkaTemplate.send("java-testTopic-Cust", customer);
         send.whenComplete((result, ex) -> {
             if (ex != null) {
                 System.out.println("Error while sending message to Kafka Topic");

@@ -1,6 +1,6 @@
 package org.example.kafkaproducer.controller;
 
-import org.example.kafkaproducer.dto.Customer;
+import org.example.dto.Customer;
 import org.example.kafkaproducer.service.KafkaMessagePublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

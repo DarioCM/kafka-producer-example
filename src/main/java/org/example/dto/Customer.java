@@ -1,4 +1,4 @@
-package org.example.kafkaproducer.dto;
+package org.example.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
