@@ -31,7 +31,7 @@ public class KafkaMessagePublisher {
             if (ex != null) {
                 System.out.println("Error while sending message to Kafka Topic");
             } else {
-                System.out.println("Message sent to Kafka Topic");
+                System.out.println("Message sent to Kafka Topic" + customer.toString());
             }
         });
     }

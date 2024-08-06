@@ -4,6 +4,7 @@ import org.example.dto.Customer;
 import org.example.kafkaproducer.service.KafkaMessagePublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -25,6 +26,7 @@ public class EventController {
 
     @PostMapping("/publish")
     public void sendEventsToKafkaTopic(@RequestBody Customer customer) {
+        //System.out.println("Controller : " + customer.getName() + " " + customer.getEmail());
         kafkaMessagePublisher.sendEventsToKafkaTopic(customer);
     }
 }
