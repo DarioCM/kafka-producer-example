@@ -13,4 +13,10 @@ public class Customer {
     private String contactNumber;
 
 
+    public Customer(int id, String name, String email, String contactNumber) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.contactNumber = contactNumber;
+    }
 }

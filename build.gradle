@@ -28,6 +28,12 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
     testCompileOnly 'org.projectlombok:lombok:1.18.34'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
+    //add test containers
+    testImplementation 'org.testcontainers:testcontainers:1.16.3'
+    testImplementation 'org.testcontainers:junit-jupiter:1.16.3'
+    testImplementation 'org.testcontainers:kafka:1.16.3'
+    //add awaitility
+    testImplementation 'org.awaitility:awaitility'
 }
 
 tasks.named('test') {
